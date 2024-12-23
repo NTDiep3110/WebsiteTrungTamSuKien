@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-57R3575"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin-top: 30px;
+        }
+        thead{
+            background-color: rgb(0, 238, 255);
+        }  
+        .btn-check:checked+.btn-outline-primary
+        {
+
+        }
+        .btn{
+            line-height: 2;
+        }
+        .btn-outline-primary{
+            color: black;
+            font-weight: bold;
+            border-color: transparent;
+        }
+        thead{
+            height: 50px;
+            line-height: 2;
+            font-size: 1.25rem;
+        }
+        /* .content{
+            display: none;
+            padding-left: 150px; padding-right: 150px;
+        }
+
+        #btnradio1:checked ~ .content #content1 {
+            display: block;
+        }
+        #btnradio2:checked ~ .content #content2 {
+            display: block;
+        }
+        #btnradio3:checked ~ .content #content3 {
+            display: block;
+        } */
+
+        .content {
+            display: none;
+            padding-left: 150px; padding-right: 150px;
+        }
+        .content.active {
+            display: block;
+        }
+        @media (max-width: 850px) {
+        .dropdown {
+            display: none;
+            }
+        }
+        .ketnoi{
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .ketnoi div{
+            padding: 10px;
+        }
+        .ketnoi img{
+            height: 3rem;
+            width: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="ketnoi">
+        <div >
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="">
+            </a>
+        </div>
+        <div >
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/128/9068/9068642.png" alt="">
+            </a>
+        </div>
+        <div >
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="head">
+        <div style=" background: linear-gradient(to right,rgb(18, 225, 115), rgb(0, 238, 255));">
+            <div style="display: flex; justify-content: space-between; padding: 2rem;">
+                <h1>Lucky</h1>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">thiết bị</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2">nhân sự</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio3">hạng mục khác</label>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Giới thiệu
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Thông tin trung tâm</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Ban tổ chức</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Thành tựu</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dịch vụ
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Thuê hội trường</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Tiệc,hội</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Cung cấp thiết bị</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Thiết kế và trang trí</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Chuyên gia</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Đặt lịch
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đặt lịch trực tuyến</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Tên sự kiện, ngày</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Số lượng người</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Hoạt động</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div  id="content1" class="content active">
+        <h2>Bảng giá thiết bị sự kiện</h2>
+        <table  id="tablepress-3-no-2" class="table table-hover">
+            <thead>
+                <tr class="row-1 odd">
+                    <th class="column-1">Hạng mục</th>
+                    <th class="column-2">Báo giá</th>
+                </tr>
+            </thead>
+            <tbody class="row-hover" >
+                <tr class="row-2 even">
+                    <td class="column-1">1. Sân khấu: <br>
+                        Chất liệu khung xương sắt hộp, sàn lót ván gỗ<br>
+                        Mặt sàn trải bạt hiflex hoặc trải thảm đen / đỏ / xám<br>
+                        Kích thước tùy chỉnh theo khảo sát thực tế</td>
+                    <td class="column-2">120.000 - 150.000 / m2</td>
+                </tr>
+                <tr class="row-3 odd">
+                    <td class="column-1">2. Màn hình LED p3.91<br>
+                        Siêu nét, độ phân giải cao<br>
+                        Cabin: 500mm x 500mm<br>
+                        Pixel (cabin): 128p x 128px<br>
+                        Hệ thống dây cáp điện, cáp tín hiệu kết nối điều khiển.</td>
+                    <td class="column-2">800.000 - 1.000.000/ m2</td>
+                </tr>
+                <tr class="row-4 even">
+                    <td class="column-1">3. Hiệu ứng sân khấu:<br>
+                        Bao gồm các hệ thống pháo phục vụ chương trình</td>
+                    <td class="column-2">1.000.000 / gói</td>
+                </tr>
+                <tr class="row-5 odd"><td class="column-1">4. Hệ thống ánh sáng:<br>
+                        16 đèn parled - 04 Kinos LED<br>
+                        06 moving beam <br>
+                        Hệ thống DMX chỉnh ánh sáng<br>
+                        Hệ thống Tiger Touch chỉnh hiệu ứng</td>
+                    <td class="column-2">5.000.000 / gói</td>
+                </tr>
+                <tr class="row-6 even">
+                    <td class="column-1">5. Hệ thống âm thanh JBL<br>
+                        Bao gồm: 04 loa full - 02 loa sub - 06 linearray<br>
+                        02 monjtor - 08 micro shuffer <br>
+                        04 chân micro - bộ mixer dynarcod1000<br>
+                        laptop kỹ thuật + chuyên viên điều chỉnh</td>
+                    <td class="column-2">7.000.000 / gói</td>
+                </tr>
+                <tr class="row-7 odd">
+                    <td class="column-1">6. Backdrop<br>
+                        Sử dụng bạt hiflex chống xuyên sáng, gia cố khung xương sắt<br>
+                        Kích thước tùy vào khảo sát thực tế</td>
+                    <td class="column-2">100.000 - 150.000 / m2</td>
+                </tr>
+                <tr class="row-8 even">
+                    <td class="column-1">7. Hagtag cầm tay<br>
+                        Tạo dáng chụp hình tại sự kiện</td>
+                    <td class="column-2">80.000 - 100.000 / cái</td>
+                </tr>
+                <tr class="row-9 odd">
+                    <td class="column-1">8. Stanndee chữ X<br>
+                        Kích thước 0.8m ngang x 1.8m cao</td>
+                    <td class="column-2">250.000 - 350.000 / bộ</td>
+                </tr>
+                <tr class="row-10 even">
+                    <td class="column-1">9. Banner<br>
+                        Kích thước tùy theo yêu cầu khách hàng</td>
+                    <td class="column-2">80.000 - 200.000 / bộ</td>
+                </tr>
+                <tr class="row-11 odd">
+                    <td class="column-1">10. Màn sao<br>
+                        Quây và che toàn bộ khu vực sân khấu, cánh gà<br>
+                        Kích thước tùy vào khảo sát thực tế</td>
+                    <td class="column-2">100.000 - 120.000 / m2</td>
+                </tr>
+                <tr class="row-12 even">
+                    <td class="column-1">11. Cột barie,<br>
+                        Cột inox vàng + dây nhung đỏ<br>
+                        Phân tách khu vực sự kiện, tạo cảm giác trang trọng</td>
+                    <td class="column-2">50.000 - 80.000 / cái</td>
+                </tr>
+                <tr class="row-13 odd">
+                    <td class="column-1">12. Thảm đỏ là phẳng, 100% mới</td>
+                    <td class="column-2">30.000 / m2</td>
+                </tr>
+                <tr class="row-14 even">
+                    <td class="column-1">13. Bục phát biểu<br>
+                        Bục gỗ vuông kèm lẵng hoa trên bục</td>
+                    <td class="column-2">350.000 - 800.000 / bộ</td>
+                </tr>
+                <tr class="row-15 odd">
+                    <td class="column-1">14. Cổng chào<br>
+                        Cổng hơi, cổng bóng  hoặc cổng fomex tạo hình theo thiết kế</td>
+                    <td class="column-2">2.500.000 - 8.000.000 / gói</td>
+                </tr>
+                <tr class="row-16 even">
+                    <td class="column-1">15. Bàn tròn phủ khăn trắng hoặc khăn theo màu doanh nghiệp</td>
+                    <td class="column-2">120.000 - 250.000 / cái</td>
+                </tr>
+                <tr class="row-17 odd">
+                    <td class="column-1">16. Bàn cocktail<br>
+                        Phủ khăn và đeo nơ theo màu doanh nghiệp</td>
+                    <td class="column-2">80.000 - 130.000 / cái</td>
+                </tr>
+                <tr class="row-18 even">
+                    <td class="column-1">17. Bàn IBM phủ khăn theo màu doanh nghiệp</td>
+                    <td class="column-2">120.000 / cái</td>
+                </tr>
+                <tr class="row-19 odd">
+                    <td class="column-1">18. Ghế banquet đeo nơ theo màu doanh nghiệp</td>
+                    <td class="column-2">25.000 - 35.000 / cái</td>
+                </tr>
+                <tr class="row-20 even">
+                    <td class="column-1">19. Ô lệch tâm che nắng che mưa<br>
+                        Kích thước 3m ngang x 3m dọc x 3.5m cao</td>
+                    <td class="column-2">500.000 / cái</td>
+                </tr>
+                <tr class="row-21 odd">
+                    <td class="column-1">20. Hệ thống nhà giàn không gian sắt, inox, nhôm hợp kim<br>
+                        Kích thước tùy vào quy mô sự kiện và khảo sát thực tế<br>
+                    </td>
+                    <td class="column-2">90.000 / m2</td>
+                </tr>
+                <tr class="row-22 even">
+                    <td class="column-1">21. Hệ thồng giàn truss <br>
+                        Dùng treo đèn, hệ thống âm thanh.<br>
+                        Bao gồm khung truss ngang và khung truss dọc</td>
+                    <td class="column-2">100.000 - 200.000 / m dài</td>
+                </tr>
+                <tr class="row-23 odd">
+                    <td class="column-1">22. Máy khói CO2<br>
+                        Tạo hiệu ứng sân khấu</td>
+                    <td class="column-2">1.500.000 / cái</td>
+                </tr>
+                <tr class="row-24 even">
+                    <td class="column-1">23. Bộ dụng cụ cắt băng khai trương, khánh thành, ...<br>
+                        Bao gồm vải cắt băng, khay, kéo, hoa</td>
+                    <td class="column-2">800.000 - 1.000.000 / bộ</td>
+                </tr>
+                <tr class="row-25 odd">
+                    <td class="column-1">24. Bóng bay trang trí</td>
+                    <td class="column-2">1.000.000 - 1.500.000 / gói</td>
+                </tr>
+                <tr class="row-26 even">
+                    <td class="column-1">25. Bóng jumbo dán logo và tên công ty</td>
+                    <td class="column-2">500.000 / quả</td>
+                </tr>
+                <tr class="row-27 odd">
+                    <td class="column-1">26. Bộ đàm</td>
+                    <td class="column-2">80.000 / bộ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="content2" class="content">
+        <h2>Bảng giá nhân sự</h2>
+        <table id="tablepress-5-no-2" class="table table-hover">
+            <thead>
+                <tr class="row-1 odd">
+                    <th class="column-1">Hạng mục</th>
+                    <th class="column-2">Báo giá</th>
+                </tr>
+            </thead>
+            <tbody class="row-hover">
+                <tr class="row-2 even">
+                    <td class="column-1">1. MC chương trình<br>
+                        MC sự kiện nhóm A ( MC nam/ MC nữ )</td>
+                    <td class="column-2">3.000.000 - 5.000.000 / show</td>
+                </tr>
+                <tr class="row-3 odd">
+                    <td class="column-1">2. MC song ngữ<br>
+                        Dẫn song song tiếng Anh và tiếng Việt</td>
+                    <td class="column-2">5.000.000 - 7.000.000 / show</td>
+                </tr>
+                <tr class="row-4 even">
+                    <td class="column-1">3. MC dịch cabin</td>
+                    <td class="column-2">5.000.000 - 10.000.000 / show</td>
+                </tr>
+                <tr class="row-5 odd">
+                    <td class="column-1">4. Ca sĩ nổi tiếng</td>
+                    <td class="column-2">Liên hệ để nhận báo giá trực tiếp từng ca sĩ</td>
+                </tr>
+                <tr class="row-6 even">
+                    <td class="column-1">5. Ca sĩ sự kiện nhóm A<br>
+                        Ca sĩ chuyên nghiệp, ngoại hình đẹp, tương tác tốt với khán giả<br>
+                        Biểu diễn 3 - 4 bài/ show</td>
+                    <td class="column-2">1.000.000 - 3.000.000 / show</td>
+                </tr>
+                <tr class="row-7 odd">
+                    <td class="column-1">6. Nhóm nhảy chuyên nghiệp<br>
+                        Bao gồm biên đạo và trang phục biểu diễn<br>
+                        Biểu diễn 2-3 bài/ show<br>
+                        Số lượng người biểu diễn tùy vào từng sự kiện</td>
+                    <td class="column-2">1.000.000 - 1.500.000 / người / show</td>
+                </tr>
+                <tr class="row-8 even">
+                    <td class="column-1">7. PGs<br>
+                        Bao gồm trang phục áo dài hoặc váy đầm dạ hội theo màu doanh nghiệp</td>
+                    <td class="column-2">300.000 - 500.000 / người</td>
+                </tr>
+                <tr class="row-9 odd">
+                    <td class="column-1">8. Lân sư rồng<br>
+                        Bao gồm 2 lân, 1 trống, 1 tễu, 1 thần tài</td>
+                    <td class="column-2">3.000.000 - 4.500.000 / show</td>
+                </tr>
+                <tr class="row-10 even">
+                    <td class="column-1">9. Ảo thuật gia</td>
+                    <td class="column-2">1.000.000 - 3.000.000 / show</td>
+                </tr>
+                <tr class="row-11 odd">
+                    <td class="column-1">10. Hoạt náo viên</td>
+                    <td class="column-2">500.000 / show</td>
+                </tr>
+                <tr class="row-12 even">
+                    <td class="column-1">11. Nhân tượng</td>
+                    <td class="column-2">500.000 - 1.000.000 người / show</td>
+                </tr>
+                <tr class="row-13 odd">
+                    <td class="column-1">12. Nhân sự quay phim<br>
+                        Gimble và máy quay trả video highlight toàn cảnh sự kiện</td>
+                    <td class="column-2">1.500.000 - 3.000.000 / show</td>
+                </tr>
+                <tr class="row-14 even">
+                    <td class="column-1">13. Nhân sự chụp hinh<br>
+                        Chụp hình trả toàn bộ 300 - 400 ảnh</td>
+                    <td class="column-2">1.000.000 - 2.000.000 / show</td>
+                </tr>
+                <tr class="row-15 odd">
+                    <td class="column-1">14. Đạo diễn sự kiện<br>
+                        Chi phí thay đổi tùy thuộc quy mô từng sự kiện.</td>
+                    <td class="column-2">3.000.000 - 10.000.000 / show</td>
+                </tr>
+                <tr class="row-16 even">
+                    <td class="column-1">15. Nhân sự chạy sự kiện, backstage, hậu cần</td>
+                    <td class="column-2">500.000 / người / show</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="content3" class="content">
+        <h2>Bảng giá các hạng mục khác</h2>
+        <table id="tablepress-6-no-2" class="table table-hover">
+            <thead>
+                <tr class="row-1 odd">
+                    <th class="column-1">Hạng mục</th>
+                    <th class="column-2">Báo giá</th>
+                </tr>
+            </thead>
+            <tbody class="row-hover">
+                <tr class="row-2 even">
+                    <td class="column-1">1. Thiết kế 2D<br>
+                        Bao gồm thiết kế backdrop, standee, hagtag, banner,...</td>
+                    <td class="column-2">1.000.000 - 5.000.000 / gói</td>
+                </tr>
+                <tr class="row-3 odd">
+                    <td class="column-1">2. Thiết kế 3D. Bao gồm:<br>
+                        Thiết kế sân khấu<br>
+                        Thiết kế photobooth <br>
+                        Vẽ phối cảnh - layout toàn bộ sự kiện.<br>
+                    </td>
+                <td class="column-2">2.000.000 - 7.000.000 / gói</td>
+                </tr>
+                <tr class="row-4 even">
+                    <td class="column-1">3. Thiết kế visual cho toàn bộ chương trình<br>
+                        Bao gồm visual chính, viasual biểu diễn nghệ thuật,...</td>
+                    <td class="column-2">1.000.000 - 3.000.000 / gói</td>
+                </tr>
+                <tr class="row-5 odd">
+                    <td class="column-1">4. Content<br>
+                        Bao gồm kịch bản khung, kịch bản kĩ thuật. kịch bản MC,...</td>
+                    <td class="column-2">1.000.000 - 3.000.000 / gói</td>
+                </tr>
+                <tr class="row-6 even">
+                    <td class="column-1">5. Tiệc mặn</td>
+                    <td class="column-2">300.000 - 500.000 / suất / người</td>
+                </tr>
+                <tr class="row-7 odd">
+                    <td class="column-1">6. Tiệc ngọt teabreak<br>
+                        bao gồm bánh, trái cây, trà, cafe, nước ngọt</td>
+                    <td class="column-2">80.000 - 150.000 / suất / người</td>
+                </tr>
+                <tr class="row-8 even">
+                    <td class="column-1">7. Tiệc buffet</td>
+                    <td class="column-2">250.000 - 300.000 / suất/ người</td>
+                </tr>
+                <tr class="row-9 odd">
+                    <td class="column-1">8. Tiệc finger foods<br>
+                        Bao gồm đồ ăn và đồ uống</td>
+                    <td class="column-2">150.000 - 250.000 / suất/ người</td>
+                </tr>
+                <tr class="row-10 even">
+                    <td class="column-1">9. Thi công, setup thiết bị sự kiện<br>
+                        Bao gồm lặp đặt và tháo dỡ<br>
+                        Chi phí thay đổi tùy vào số lượng thiết bị và quy mô sự kiện.</td>
+                    <td class="column-2">1.000.000 - 5.000.000 / gói</td>
+                </tr>
+                <tr class="row-11 odd">
+                    <td class="column-1">10. Vận chuyên 2 chiều<br>
+                        Đơn giá thay đổi tùy vào quãng đường vận chuyển</td>
+                    <td class="column-2">1.000.000 - 5.000.000 / gói</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="foot">
+        <div style=" background: linear-gradient(to left,rgb(18, 225, 115), rgb(0, 238, 255));">
+            <div style="display: flex; justify-content: space-between; padding: 20px; padding-right: 200px;">
+                <h1>Lucky</h1>
+                <div class="widget widget_block">
+                    <div class="lien-he-truc-tiep">
+                    <h2>Liên hệ trực tiếp</h2>
+                    <p>Tư vấn dịch vụ 24/7</p>
+                    Sự kiện: 0366898984<br>
+                    Thiết bị: dodangkhoa@gmail.com<br>
+                    Nhân sự: nguyenthitramy@gmail.com
+                    <p>Khiếu nại dịch vụ</p>
+                    Hotline: 0384424232</div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <script>
+        const radioButtons = document.querySelectorAll('input[name="btnradio"]');
+        const contents = document.querySelectorAll('.content');
+
+        radioButtons.forEach((radio, index) => {
+            radio.addEventListener('change', () => {
+                contents.forEach(content => content.classList.remove('active'));
+                contents[index].classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
